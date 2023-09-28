@@ -27,7 +27,7 @@ class CarFactory():
 
     def create_rorscach(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
         engine: Engine = WilloughbyEngine(current_mileage, last_service_mileage)
-        battery: Battery = SpindlerBattery(current_date, last_service_date)
+        battery: Battery = NubbinBattery(current_date, last_service_date)
         return Car(engine, battery)
 
     def create_thovex(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
